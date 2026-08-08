@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sgg's Personal Weather App </title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sgg's Personal Weather App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Weather App</h1>
+    <div class="app-shell">
+        <div class="weather-card">
+            <h1>Weather App</h1>
+            <p class="subtitle">Check the weather in your favorite city</p>
 
-    <input
-        type="text"
-        id="cityInput"
-        placeholder="Enter city"
-    />
+            <div class="search-row">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city"
+                />
+                <button id="searchBtn">Search</button>
+            </div>
 
-    <button id="searchBtn">
-        Search
-    </button>
-
-    <div id="weatherInfo">
-
+            <div id="loading" class="status"></div>
+            <div id="errormess" class="status error"></div>
+            <div id="weatherInfo" class="weather-result"></div>
+        </div>
     </div>
+
     <script src="script.js"></script>
     <footer>
-    <p>© 2024 Sgg's Personal Weather App. All rights reserved.</p>
+        <p>© 2024 Sgg's Personal Weather App. All rights reserved.</p>
     </footer>
 </body>
-
 </html>
